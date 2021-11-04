@@ -1,4 +1,4 @@
-// View отвечает за отрисовку
+
 export default class View {
     constructor(canvas){
         this.canvas = canvas;
