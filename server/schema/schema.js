@@ -1,8 +1,6 @@
 const graphql = require('graphql');
-
 const { GraphQLObjectType, GraphQLString, GraphQLSchema,GraphQLID, GraphQLInt } = graphql;
-
-
+//fake backend 
 let users = [
   {
     id: 1,
