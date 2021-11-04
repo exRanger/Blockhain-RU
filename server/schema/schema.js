@@ -51,8 +51,6 @@ const jobs = [
   }
 ]
 
-
-
 const UserType = new GraphQLObjectType({
   name: 'User',
   fields: () => ({
