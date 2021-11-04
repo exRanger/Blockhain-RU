@@ -95,12 +95,6 @@ const Query = new GraphQLObjectType({
   }
 });
 
-
- 
-
-
-
 module.exports = new GraphQLSchema({
   query: Query,
 });
- 
