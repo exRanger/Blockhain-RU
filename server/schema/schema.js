@@ -28,7 +28,6 @@ let users = [
   }
 ]
 
-
 const jobs = [
   {
     id: '1',
