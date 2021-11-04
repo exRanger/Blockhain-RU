@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express') // or nest?
 const {graphqlHTTP} = require('express-graphql')
 const schema = require('./schema/schema')
 
