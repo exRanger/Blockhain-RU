@@ -1,55 +1,8 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString, GraphQLSchema,GraphQLID, GraphQLInt } = graphql;
-//fake backend 
-let users = [
-  {
-    id: 1,
-    name: "KURT",
-    surname: "KOBEIN",
-    jobId: 1
-  },
-  {
-    id: 2,
-    name: "LOXNES ",
-    surname: "KEK",
-    jobId: 2
-  },
-  {
-    id: 3,
-    name: "THOMAS",
-    surname: "SMITH",
-    jobId: 3
-  },
-  {
-    id: 4,
-    name: "ADAM",
-    surname: "MORNINGSTAR",
-    jobId: 4
-  }
-]
 
-const jobs = [
-  {
-    id: '1',
-    job: 'Front-end developer',
-    experience: 5
-  },
-  {
-    id: '2',
-    job: "DevOps engineer",
-    experience: 4
-  },
-  {
-    id: '3',
-    job: 'Data science engineer',
-    experience: 8
-  },
-  {
-    id: '3',
-    job: 'Bussines analitic expert',
-    experience: 5
-  }
-]
+
+// models scheme from mongoose coming in...
 
 const UserType = new GraphQLObjectType({
   name: 'User',
