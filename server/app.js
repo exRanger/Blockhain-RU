@@ -5,7 +5,6 @@ const schema = require('./schema/schema')
 const {log} = console
 
 const app = express()
-
 const PORT = 3030 // .env
 
 app.use('/graphql', graphqlHTTP({
