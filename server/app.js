@@ -5,6 +5,8 @@ const schema = require('./schema/schema')
 
 const {log} = console
 
+const uri // from .env ....
+
 const app = express()
 const PORT = 3030 // .env
 
