@@ -5,12 +5,13 @@ const Meta = ({children}) => {
     return (
     <>
         <Head>
-            <meta keywords="headmade, itcompany, it-headmade"></meta>
+            <meta keywords="blockchain, solidity, geth, ethereum, smart-contracts"></meta>
         </Head>
         <div>
-           <strong>TASK BY HEADMADE.</strong>
-           <div className="navbar">
-                <A href={'/'} text="Главная"/>
+           <div className="header__navbar">
+                <A href={'/'} text="Main"/>
+                <A href={'/'} text="Docs"/>
+                <A href={'/'} text="Forum"/>
             </div>    
         </div>
         <div>
