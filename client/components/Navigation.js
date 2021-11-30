@@ -13,9 +13,6 @@ export default function(){
   handleClick = e => {
     // Link to?
   };
-  
-  
-
     return (
       <Menu
         onClick={this.handleClick}
@@ -29,8 +26,7 @@ export default function(){
             <Menu.Item key="1">Introdution to blockhain</Menu.Item>
             <Menu.Item key="2">Installation</Menu.Item>
           </Menu.ItemGroup>
-        </SubMenu>
-        
+        </SubMenu> 
       </Menu>
     );
   }
