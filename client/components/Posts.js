@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useMemo } from 'react'
 import {Col, Row} from 'antd'
 import Post from './Post'
 import {DataContext} from '../pages/index'
@@ -9,8 +9,8 @@ export default function Posts(){
 
     return (
      <>
-     <Col xs={12} sm={6} md={12}>
-        <Row wrap gutter={[8, 16]}>
+     <Col xs={14} md={22}>
+        <Row wrap gutter={[1, 12]}>
                 {data.users.map((user) => (
             <Col xs={24} md={12} offset={2} lg={6}>
                 <Post user={user}/>
