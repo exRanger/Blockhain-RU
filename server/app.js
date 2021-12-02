@@ -1,6 +1,8 @@
 const express = require('express') // or nest?
 const {graphqlHTTP} = require('express-graphql')
 const {mongoose} = require('mongoose')
+const fs = require('fs')
+const path = require('path')
 const schema = require('./schema/schema')
 
 const {log} = console
