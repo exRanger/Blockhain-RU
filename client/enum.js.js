@@ -2,34 +2,20 @@ const math = require('mathjs')
 
 const h = 1.06* 10**-27
 let V = 24*10**9
-let V_nakachki = 24 // GHz
-let T1 = 4.2 // K
-let T2 = 0.5 // K
+let V_nak = 5.436
+let T1 = 4.2 
+let T2 = 0.5 
 let k = 1.38 * 10**-16
 
 let S = 0.5
 let Ys_2pi = 3.78 * 10**6
 
 let x = 0.3/(9.4/24)**5 
-console.log('x', x)
 let one_div_T1e_4and2K = x * math.coth(h*V*6.28/ (2*k*T1)) + 6.3 * 10**9 * Math.E**(-47/4.2) 
-
-console.log('1/T1e:4.2K', one_div_T1e_4and2K)
-
-
 let one_div_T1e_0and5 = x * math.coth(h*V*6.28/ (2*k*T2)) + 6.3 * 10**9 * Math.E**(-47/T2)
-console.log('1/T1e: 4.2K', one_div_T1e_0and5)
-
-
-
 let Ho = V / (Ys_2pi)
 let deltaHn = 6.28 * 4.26 * 10**3 * 1.06*10**-27*5.68*10**22
 
-
-console.log('Ho', Ho)
-console.log('delta Hn', deltaHn)
-
-console.log('delta Hn/Ho', (deltaHn/Ho))
 
 //4.2
 let one_delT0n = (8*3.14/5) * (S*(S+1)/3)  * (deltaHn/Ho)**2 * (2.37*10**19 / (5.68*10**22)) *(3.78*10**6/ (4.26*10**3)) * one_div_T1e_4and2K
