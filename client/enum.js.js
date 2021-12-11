@@ -1,15 +1,14 @@
-const math = require('mathjs')
+import math from 'mathjs'
 
 const h = 1.06* 10**-27
-let V = 24*10**9
-let V_nak = 5.436
-let T1 = 4.2 
-let T2 = 0.5 
-let k = 1.38 * 10**-16
+const V = 24*10**9
+const V_nak = 5.436
+const T1 = 4.2 
+const T2 = 0.5 
+const k = 1.38 * 10**-16
 
 let S = 0.5
 let Ys_2pi = 3.78 * 10**6
-
 let x = 0.3/(9.4/24)**5 
 let one_div_T1e_4and2K = x * math.coth(h*V*6.28/ (2*k*T1)) + 6.3 * 10**9 * Math.E**(-47/4.2) 
 let one_div_T1e_0and5 = x * math.coth(h*V*6.28/ (2*k*T2)) + 6.3 * 10**9 * Math.E**(-47/T2)
@@ -19,7 +18,7 @@ let one_delT0n = (8*3.14/5) * (S*(S+1)/3)  * (deltaHn/Ho)**2 * (2.37*10**19 / (5
 let one_delT0n_2 = (8*3.14/5) * (S*(S+1)/3)  * (deltaHn/Ho)**2 * (2.37*10**19 / (5.68*10**22)) *(3.78*10**6/ (4.26*10**3)) * one_div_T1e_0and5
 let sqrtM = 6.28 * (3.78* 10**6) * (6.28 *(3.78*10**6)*(1.06*10**-27)*(2.37*10**19))
 let g = 1 /  (2.5* sqrtM * 10**4)
-let Volume = g * (3.14/2) * (3.78**2) * (10**12) * (6.28**2) * 10**-2
+let Volume = g * (Math.PI/2) * (3.78**2) * (10**12) * (6.28**2) * 10**-2
 let V2 = (3.14/2) * (6.1*10**-8) * 2.576* 2.576 * 10**12 * 6.28**2 * 10**-2
 let T1e_4K = 1/ one_div_T1e_4and2K
 let T1e_05K = 1/ one_div_T1e_0and5 
