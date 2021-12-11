@@ -4,17 +4,17 @@ const { GraphQLObjectType, GraphQLString, GraphQLSchema,GraphQLID, GraphQLInt } 
 
 // models scheme from mongoose coming in...
 
-const UserType = new GraphQLObjectType({
-  name: 'User',
+const MarketType = new GraphQLObjectType({
+  name: 'Market',
   fields: () => ({
     id: { type: GraphQLID},
     name: { type: GraphQLString },
-    surname: { type: GraphQLString },
+    price: { type: GraphQLString },
   }), 
 });
 
-const JobsType = new  GraphQLObjectType({
-  name: "Jobs",
+const TopicsType = new  GraphQLObjectType({
+  name: "Topics",
   fields: () => ({
     id: {type: GraphQLID},
     job: {type: GraphQLString },
@@ -32,17 +32,17 @@ const Query = new GraphQLObjectType({
   name: 'Query',
   fields: {
     user: {
-      type: UserType,
+      type: MarketType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-          return  users.find( user => user.id == args.id)
+          return  users.find( crypto => crypto.id == args.id)
       },
     },
     jobs: {
-      type: JobsType,
+      type: TopicsType,
       args: {id: {type: GraphQLID}},
       resolve(parent, args){
-        return jobs.find(job => job.id == args.id)
+        return jobs.find(topics => topics.id == args.id)
       }
     }
   }
