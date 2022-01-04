@@ -17,6 +17,16 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }))
 
+app.get('/nocors', (req, res) => {
+  res.send('ok');
+});
+
+app.use(require('cors')());
+
+// This response will have CORS headers, because this route handler
+// is after the CORS middleware in the middleware list.
+
+
 app.listen(PORT, err => {
     err ? log(error) : log(`Server listen on ${PORT} port`)
 })
