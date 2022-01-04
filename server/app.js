@@ -25,7 +25,9 @@ app.use(require('cors')());
 
 // This response will have CORS headers, because this route handler
 // is after the CORS middleware in the middleware list.
-
+app.get('/cors', (req, res) => {
+  res.send('ok');
+});
 
 app.listen(PORT, err => {
     err ? log(error) : log(`Server listen on ${PORT} port`)
