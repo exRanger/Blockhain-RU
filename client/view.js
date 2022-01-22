@@ -1,13 +1,14 @@
-export const typeAsset = gql`
+export const typePlot = gql`
   extend type Query {
     isConnection: Boolean!
-    dataGraphs: [ID!]
+    dataPlots: [ID!]
   }
 `;
 
 export const typeAsset = gql`
   extend type Query {
     isConnection: Boolean!
-    dataGraphs: [ID!]
+    dataAssets: [ID!]
+    assets: [String!]!
   }
 `;
