@@ -1,3 +1,8 @@
+import {
+  ApolloClient, // non-usable
+  gql,
+} from '@apollo/client';
+
 export const typePlot = gql`
   extend type Query {
     isConnection: Boolean!
