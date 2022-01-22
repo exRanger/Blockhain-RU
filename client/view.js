@@ -1,10 +1,13 @@
-// MVC?
-// OR REACT+APOLLO CLIENT?
+export const typeAsset = gql`
+  extend type Query {
+    isConnection: Boolean!
+    dataGraphs: [ID!]
+  }
+`;
 
-class MainView{
-  constructor(){
-   
+export const typeAsset = gql`
+  extend type Query {
+    isConnection: Boolean!
+    dataGraphs: [ID!]
   }
-  render(){
-  }
-}
+`;
