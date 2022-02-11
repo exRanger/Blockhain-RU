@@ -16,4 +16,4 @@ export const typeAsset = gql`
     dataAssets: [ID!]
     assets: [String!]!
   }
-`;
+`
