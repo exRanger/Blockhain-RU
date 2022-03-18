@@ -1,7 +1,6 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString, GraphQLSchema,GraphQLID, GraphQLInt } = graphql;
 
-
 // models scheme from mongoose coming in...
 
 const MarketType = new GraphQLObjectType({
@@ -11,7 +10,7 @@ const MarketType = new GraphQLObjectType({
     name: { type: GraphQLString },
     price: { type: GraphQLString },
   }), 
-});
+})
 
 const TopicsType = new  GraphQLObjectType({
   name: "Topics",
