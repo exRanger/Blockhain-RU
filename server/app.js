@@ -18,7 +18,7 @@ app.use('/graphql', graphqlHTTP({
 
 app.get('/nocors', (req, res) => {
   res.send('ok')
-});
+})
 
 app.use(require('cors')())
 
