@@ -1,5 +1,5 @@
 import {ApolloClient, ApolloLink, InMemoryCache} from "@apollo/client"
-import { asyncMap } from "@apollo/client/utilities";
+import {asyncMap} from "@apollo/client/utilities";
 
 const client = new ApolloClient({
   uri: '',
