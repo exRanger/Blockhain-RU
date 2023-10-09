@@ -1,4 +1,5 @@
 import {ApolloClient, ApolloLink, InMemoryCache} from "@apollo/client"
+import { asyncMap } from "@apollo/client/utilities";
 
 const client = new ApolloClient({
   uri: '',
@@ -10,10 +11,21 @@ const client = new ApolloClient({
   }
 });
 
-const formatDateLink = new ApolloLink((operation, forward) => {
+export const formatDateLink = new ApolloLink((operation, forward) => {
   return forward(operation).map(response => {
     if (response.data.date) {
       response.data.date = new Date(response.data.date);
+    }
+    return response;
+  });
+});
+
+export const usdToEurLink = new ApolloLink((operation, forward) => {
+  return asyncMap(forward(operation), async (response) => {
+    let data = response.data;
+    if (data.price && data.currency === "USD") {
+      data.price = await usdToEur(data.price);
+      data.currency = "EUR";
     }
     return response;
   });
