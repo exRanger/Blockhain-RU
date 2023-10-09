@@ -8,5 +8,6 @@ const client = new ApolloClient({
     'client-name': 'WidgetX Ecom [web]',
     'client-version': '1.0.0'
   }
+});
 
 export default client
