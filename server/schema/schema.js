@@ -1,10 +1,8 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString,GraphQLSchema, GraphQLID, GraphQLInt } = graphql
 
-// models scheme from mongoose coming in...
-
 const MarketType = new GraphQLObjectType({
-  name: 'Market',
+  name: 'getHash',
   fields: () => ({
     id: { type: GraphQLID},
     name: { type: GraphQLString },
@@ -13,7 +11,7 @@ const MarketType = new GraphQLObjectType({
 })
 
 const TopicsType = new  GraphQLObjectType({
-  name: "Topics",
+  name: "geetTokenName",
   fields: () => ({
     id: {type: GraphQLID},
     job: {type: GraphQLString },
@@ -30,18 +28,18 @@ const TopicsType = new  GraphQLObjectType({
 const Query = new GraphQLObjectType({
   name: 'Query',
   fields: {
-    user: {
+    ERC_20: {
       type: MarketType,
       args: { id: { type: GraphQLID } },
-      resolve(parent, args) {
-          return  users.find( crypto => crypto.id == args.id)
+      resolve(token, args) {
+          return token + sers.find(crypto => crypto.id == args.id)
       },
     },
-    jobs: {
+    BSC_20: {
       type: TopicsType,
       args: {id: {type: GraphQLID}},
       resolve(parent, args){
-        return jobs.find(topics => topics.id == args.id)
+        return jobs.find(chainValue => parent.id == chainValue.id)
       }
     }
   }

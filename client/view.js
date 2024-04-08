@@ -1,5 +1,4 @@
 import {
-  ApolloClient, // non-usable
   gql,
 } from '@apollo/client';
 
