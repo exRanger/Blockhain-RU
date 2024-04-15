@@ -1,7 +1,7 @@
 
 const {createHmac} = await import('node:crypto');
 const SHA256 = require('crypto-js/sha256')
-// Реализация блока
+
 class GenerateBlock {
     constructor(index, current_time, info, nextHash=" "){
         this.index = index;
