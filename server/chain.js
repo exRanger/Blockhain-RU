@@ -40,7 +40,7 @@ class BlockController {
             }
         }
         return true;
-    }
+    };
 }
 
 export default BlockController;
