@@ -5,6 +5,8 @@ const SHA256 = require('crypto-js/sha256')
 /*
 * @private
 * @description block generator
+* @public
+* @author ragnarek501@gmail.com (Zagirov I.).
 **/
 class GenerateBlock {
     constructor(index, current_time, info, nextHash=" "){
