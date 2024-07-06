@@ -76,7 +76,7 @@ export function handleTransfer(event: TransferEvent): void {
   }
   token.owner = event.params.to.toHexString();
   token.save();
-
+  log(token)
   let user = User.load(event.params.to.toHexString());
   if (!user) {
     user = new User(event.params.to.toHexString());
