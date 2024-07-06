@@ -1,6 +1,23 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString,GraphQLSchema, GraphQLID, GraphQLInt } = graphql
 
+type Token @entity {
+  id: ID!
+  tokenID: BigInt!
+  contentURI: String
+  tokenIPFSPath: String
+  name: String!
+  createdAtTimestamp: BigInt!
+  creator: User!
+  owner: User!
+}
+
+type User @entity {
+  id: ID!
+  tokens: [Token!]! @derivedFrom(field: "owner")
+  created: [Token!]! @derivedFrom(field: "creator")
+}
+
 const MarketType = new GraphQLObjectType({
   name: 'getHash',
   fields: () => ({
@@ -8,7 +25,7 @@ const MarketType = new GraphQLObjectType({
     name: { type: GraphQLString },
     price: { type: GraphQLString },
   }), 
-})
+}) as User
 
 const TopicsType = new  GraphQLObjectType({
   name: "geetTokenName",
@@ -43,7 +60,7 @@ const Query = new GraphQLObjectType({
       }
     }
   }
-});
+}) as Token;
 
 module.exports = new GraphQLSchema({
   query: Query,
