@@ -11,6 +11,8 @@ import {
   Token, User
 } from '..//schema'
 
+import {log} from 'console';
+
 /*
 * @private
 * @description block generator
