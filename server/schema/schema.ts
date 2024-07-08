@@ -26,7 +26,7 @@ const MarketType = new GraphQLObjectType({
     price: { type: GraphQLString },
   }), 
 }) as User
-
+// topics
 const TopicsType = new  GraphQLObjectType({
   name: "geetTokenName",
   fields: () => ({
