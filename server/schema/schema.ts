@@ -41,7 +41,7 @@ const TopicsType = new  GraphQLObjectType({
     }
   })
 })
-
+// query gql
 const Query = new GraphQLObjectType({
   name: 'Query',
   fields: {
