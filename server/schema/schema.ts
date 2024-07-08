@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString,GraphQLSchema, GraphQLID, GraphQLInt } = graphql
-
+// token interface
 type Token @entity {
   id: ID!
   tokenID: BigInt!
