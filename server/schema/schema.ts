@@ -17,7 +17,7 @@ type User @entity {
   tokens: [Token!]! @derivedFrom(field: "owner")
   created: [Token!]! @derivedFrom(field: "creator")
 }
-
+// market
 const MarketType = new GraphQLObjectType({
   name: 'getHash',
   fields: () => ({
