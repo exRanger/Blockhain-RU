@@ -98,8 +98,6 @@ contract Ballot {
         proposals[proposal].voteCount += sender.weight;
     }
 
-    /// @dev Computes the winning proposal taking all
-    /// previous votes into account.
     function winningProposal() public view
             returns (uint winningProposal_)
     {
