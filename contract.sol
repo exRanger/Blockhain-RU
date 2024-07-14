@@ -95,9 +95,7 @@ contract Ballot {
         sender.voted = true;
         sender.vote = proposal;
 
-        // If `proposal` is out of the range of the array,
-        // this will throw automatically and revert all
-        // changes.
+
         proposals[proposal].voteCount += sender.weight;
     }
 
