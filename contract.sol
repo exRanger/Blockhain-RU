@@ -9,7 +9,6 @@ contract Ballot {
         uint vote; 
     }
 
-
     struct Proposal {
         bytes32 name;   // short name (up to 32 bytes)
         uint voteCount; // number of accumulated votes
