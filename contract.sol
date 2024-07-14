@@ -27,9 +27,6 @@ contract Ballot {
         voters[chairperson].weight = 1;
 
         for (uint i = 0; i < proposalNames.length; i++) {
-            // `Proposal({...})` creates a temporary
-            // Proposal object and `proposals.push(...)`
-            // appends it to the end of `proposals`.
             proposals.push(Proposal({
                 name: proposalNames[i],
                 voteCount: 0
