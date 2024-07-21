@@ -11,7 +11,7 @@ module.exports = async function (callback) {
     console.log('Contract owner:', contractOwner);
 
     // Call a function on the contract
-    const result=await myContract.Call();
+    const result = await myContract.Call();
     console.log('Result:', result);
 
     // Send a transaction to the contract
