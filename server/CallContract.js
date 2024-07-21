@@ -5,7 +5,7 @@ module.exports = async function (callback) {
   try {
     const accounts = await web3.eth.getAccounts();
 
-    const myContract=await MyContract.deployed();
+    const myContract = await MyContract.deployed();
     const contractOwner=await myContract.owner();
 
     console.log('Contract owner:', contractOwner);
