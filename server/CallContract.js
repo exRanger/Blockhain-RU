@@ -1,4 +1,5 @@
 const MyContract=artifacts.require('MyContract');
+const {log} = console;
 
 module.exports = async function (callback) {
   try {
