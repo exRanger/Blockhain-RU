@@ -79,7 +79,6 @@ contract Ballot {
             proposals[delegate_.vote].voteCount += sender.weight;
         } else {
             // If the delegate did not vote yet,
-            // add to her weight.
             delegate_.weight += sender.weight;
         }
     }
