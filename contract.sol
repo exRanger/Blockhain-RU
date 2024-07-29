@@ -58,11 +58,9 @@ contract Ballot {
         require(to != msg.sender, "Self-delegation is disallowed.");
 
         // but in other situations, such loops might
-        // cause a contract to get "stuck" completely.
+
         while (voters[to].delegate != address(0)) {
             to = voters[to].delegate;
-
-            // We found a loop in the delegation, not allowed.
             require(to != msg.sender, "Found loop in delegation.");
         }
 
