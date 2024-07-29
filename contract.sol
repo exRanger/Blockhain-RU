@@ -36,7 +36,6 @@ contract Ballot {
 
   
     function giveRightToVote(address voter) external {
-   
         require(
             msg.sender == chairperson,
             "Only chairperson can give right to vote."
