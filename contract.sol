@@ -48,7 +48,7 @@ contract Ballot {
         voters[voter].weight = 1;
     }
 
-    /// Delegate your vote to the voter `to`.
+    
     function delegate(address to) external {
         Voter storage sender = voters[msg.sender];
         require(sender.weight != 0, "You have no right to vote");
