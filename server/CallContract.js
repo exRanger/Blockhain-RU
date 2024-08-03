@@ -10,7 +10,6 @@ module.exports = async function (callback) {
     // Call a function on the contract
     const result = await myContract.Call();
     console.log('Result:', result);
-
     // Send a transaction to the contract
     const tx = await myContract.Call({ from: accounts[0], value: web3.utils.toWei('1', 'ether') });
     console.log('Transaction:', tx);
