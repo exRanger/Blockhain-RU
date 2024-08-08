@@ -3,6 +3,7 @@ import {struct, u32, ns64} from "@solana/buffer-layout"
 import {Buffer} from 'buffer'
 import web3 from "@solana/web3.js"
 
+
 let keypair = web3.Keypair.generate();
 let payer = web3.Keypair.generate();
 
