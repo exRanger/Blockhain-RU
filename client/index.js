@@ -49,4 +49,3 @@ allocateTransaction.add(new web3.TransactionInstruction({
 }));
 
 await web3.sendAndConfirmTransaction(connection, allocateTransaction, [payer, keypair]);
-
