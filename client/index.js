@@ -26,6 +26,7 @@ let allocateTransaction = new web3.Transaction({
   feePayer: payer.publicKey
 });
 
+
 let keys = [{pubkey: keypair.publicKey, isSigner: true, isWritable: true}];
 let params = { space: 100 };
 
