@@ -18,5 +18,4 @@ module.exports = async function (callback) {
     console.error(error);
     callback(error);
   }
-  
 };
