@@ -3,7 +3,7 @@ const {log, error} = console;
 
 const loggerError = (error) => {
   error('CATHCHED', error);
-}
+};
 
 module.exports = async function (callback) {
   try {
